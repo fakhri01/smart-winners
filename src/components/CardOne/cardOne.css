@@ -1,0 +1,32 @@
+.card-one{
+    max-width: 380px;
+    height: 90px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding-right: 1rem;
+}
+
+.card-one img{
+    width: 72px;
+    height: 72px;
+    margin-right: 7px;
+    padding-left: 7px;
+}
+
+.card-one h3{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.card-one a{
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.card-one .content-text{
+    font-size: 14px;
+    color: #5f5f5f;
+    box-sizing: content-box;
+}

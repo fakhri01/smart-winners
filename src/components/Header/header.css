@@ -1,0 +1,162 @@
+header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+header .header-top{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+header .header-top .language,
+header .logout {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header .logout{
+    padding-left: 2rem;
+}
+
+header .logout p{
+    margin-bottom: 0;
+}
+header .header-top .language{
+    text-align: right;
+    padding-right: 2rem;
+}
+header .header-top .language ul{
+    padding: 0;
+    margin: 0;
+}
+header .header-top .language ul li{
+    display: inline-block;
+    margin: 4px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+header .header-top a{
+    text-decoration: none;
+}
+
+header .header-top .language ul li img{
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown{
+    color: #000!important;
+    background-color: #fff!important;
+    border: none!important;
+    padding: 0!important;
+}
+
+nav{
+    background-color: #F30000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 7.5px 0;
+}
+
+nav .logo,
+nav .avatar{
+    display: none;
+}
+nav ul{
+    margin-bottom: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    padding-right: 1rem;
+    color: #fff;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus{
+    color: #fff;
+}
+
+.active{
+    text-decoration: underline;
+}
+
+.myAccount{
+    background: #0061A3;
+    border-radius: 8px;
+    padding: 7.5px 38px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.mini-menu{
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px){
+    nav,
+    .header-top .language,
+    .header-top .logo,
+    .myAccount,
+    nav ul li:nth-child(even){
+        display: none;
+    }
+    
+    .show-nav,
+    nav ul li{
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .header-top{
+        order: 2;
+        grid-template-columns: 1fr!important;
+    }
+
+    .header-top .logout,
+    .mini-menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-top .logout{
+        width: 100%;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .header-top .logout p{
+        font-size: 14px;
+    }
+
+    .mini-menu{
+        margin-bottom: 1rem;
+    }
+
+    .mini-menu button,
+    .mini-menu button:focus{
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+    .mini-menu .logo{
+        width: 182px;
+    }
+    .mini-menu .logo img{
+        width: 100%;
+    }
+}

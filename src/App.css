@@ -1,38 +1,389 @@
-.App {
-  text-align: center;
+.hero img{
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.top-section,
+.lottery-card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.upcoming-lottery{
+    margin-top: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.play-online{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Common Card styles */
+.card-btn{
+    font-weight: 600;
+    background: #F7D300;
+    border-radius: 8px;
+    border: none;
+    flex: 1;
+    padding: 7px 0;
+}
+.card-title{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    padding-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-title img{
+    padding-right: 2px;
+} 
+
+
+/* Winner Section */
+.winners {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.winners .winner-img-wrapper{
+    width: 100%!important;
+    position: relative;
+}
+
+.winners .winner-img-wrapper img:last-child{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.winners .winner-img-wrapper img:first-child{
+    width: 100%;
+    float: left;
+}
+
+.winners .line{
+    clear: both;
+}
+.winners h2{
+    font-size: 28px;
+    font-weight: 500;
+
+}
+
+.winners strong{
+    font-size: 36px;
+    font-weight: 700;
+    color: #0061A3;
+    margin-left: 1rem;
+}
+
+.winners-bottom p:first-child{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.winners-bottom p:last-child{
+    font-size: 12px;
+}
+
+.winners ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.winners ul li{
+    width: 20px;
+    height: 20px;
+    background-color: #f30000;
+    color: #fff;
+    border-radius: 50px;
+    line-height: 20px;
+    margin: 0 3px;
+    font-size: 12px;
+}
+
+
+
+.winner-info h2{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.winner-info p{
+    text-align: justify;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.winner-info a,
+.winner-info .card-btn{
+    display: block;
+}
+
+.winner-info a{
+    margin: 31px 0 34px;
+}
+
+.winner-info .card-btn{
+    width: 90%;
+    margin: auto;
+}
+
+.latest-winners .winners-list {
+    height: 269px;
+    overflow-y: scroll;
+}
+
+.latest-winners h2{
+    font-size: 16px;
+}
+
+.latest-winners .total-prices{
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.latest-winners .total-prices h4{
+    font-size: 18px;
+}
+
+.latest-winners .total-prices .total-amount{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 22px;
+    color: #13902A;
+    margin-bottom: 0;
+}
+
+.latest-winners .total-prices p:last-child{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.latest-winners .total-prices p strong{
+    font-weight: 500;
+    font-size: 26px;
+}
+hr{
+    color: gray!important;
+}
+/* Footer */
+
+footer{
+    width: 100%;
+    background: linear-gradient(0deg, rgba(224, 224, 224, 0.47) 0%,
+     rgba(225, 225, 225, 0.16) 20.75%, 
+    rgba(255, 254, 254, 0.26) 84.14%, #FFFFFF 126.52%);
+    overflow: hidden;
+}
+
+footer .footer-stars{
+    width: 100%;
+    position: relative;
+    top: 100px;
+    z-index: -10;;
+}
+
+footer .live-chat{
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+}
+
+footer .live-chat div:first-child{
+    margin-right: 1rem;
+}
+
+footer .live-chat h4{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+footer .live-chat p{
+    font-size: 12px;
+    line-height: 21px;
+    color: #5F5F5F;
+}
+
+footer .footer-title{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer ul .mobile-link{
+    display: none;
+}
+
+footer ul li a{
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+footer ul li a:hover,
+footer ul li a:focus{
+    color: #000;
+}
+
+footer p{
+    font-size: 12px;
+}
+
+footer p:last-child{
+    font-size: 13px;
+    line-height: 21px;
+}
+
+
+footer .social-links ul{
+    text-align: center;
+}
+
+
+footer .social-icons ul:first-child{
+    justify-content: center;
+}
+
+footer .social-icons{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 1024px){
+    .play-online{
+        grid-template-columns: repeat(4, 1fr)!important;
+    }
+
+    .lottery-card-wrapper,
+    .top-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .play-online{
+        grid-template-columns: repeat(3, 1fr)!important;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .lottery-card-wrapper,
+    .top-section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .upcoming-lottery{
+        margin-top: 1.5rem;
+    }
+    .upcoming-lottery h2{
+        font-size: 18px!important;
+        margin-top: 0rem;
+        padding-left: 10px!important;
+    }
+
+    .upcoming-games-section h2{
+        font-size: 16px!important;
+        padding: 13px 0!important;
+    }
+
+
+    .play-online{
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+
+    .winners{
+        padding: 0;
+    }
+
+    .winner-info h2{
+        text-align: center;
+    }
+    .winner-info p{
+        padding: 0 1rem;
+    }
+
+    .winners .card-btn{
+        margin-bottom: 1rem;
+    }
+
+    .winners-section h2{
+        padding: 13px 0!important;
+    }
+
+    .faq-section{
+        display: none;
+    }
+
+    footer .footer-title
+    {
+        font-size: 14px;
+    }
+    footer .footer-title:nth-child(1){
+        margin-top: 0!important;
+    }
+
+    footer .footer-title-main{
+        font-size: 16px!important;
+    }
+
+    footer p{
+        font-size: 10px!important;
+    }
+
+    .usefull-links{
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .mobile-link{
+        display: block!important;
+    }
+
+    footer ul li a{
+        font-size: 14px;
+    }
+    footer .social-icons{
+        grid-template-columns: repeat(2, 1fr)!important;
+        justify-content: flex-end;
+    }
+
+    footer .social-icons ul:first-child{
+        grid-column: span 2;
+        order: 2;
+        transform: translateX(25%);
+        margin-top: -2rem;
+    }
+
+    footer .footer-stars{
+        top: 30px;
+    }
 }
